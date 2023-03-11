@@ -18,15 +18,16 @@ interface Shop {    // declare interface for the type of the initial state
 export const shopSlice = createApi({
   reducerPath: "databse",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:2005/shop",
+    baseUrl: "http://localhost:2005/",
   }),
   endpoints(builder) {
     return {
       fetchShops: builder.query<Shop[], number | void>({
-        query() {
-          return ``;
-        },
+        query: () => 'shop',
       }),
+      fetchShop: builder.query<Shop, number | void>({
+        query: (id) => `shop/${id}`
+      })
     };
   },
 });
