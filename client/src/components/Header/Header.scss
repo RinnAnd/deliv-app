@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+.header_main {
+    position: sticky;
+    top: 0px;
+    padding: 2rem;
+    box-shadow: 0 0 2rem rgb(26, 26, 26);
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: rgb(255, 143, 87)
+}
+
+.nav_right {
+    @extend .nav_left
+}
+
+span {
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Tilt Neon', cursive;
+    font-size: 0.7rem;
+}
+
+span:hover {
+    color: red;
+    transform: translateY(-0.2rem);
+}
+
