@@ -4,7 +4,7 @@
     position: sticky;
     top: 0px;
     padding: 2rem;
-    box-shadow: 0 0 2rem rgb(26, 26, 26);
+    box-shadow: 0.5rem 1rem 1.1rem rgb(26, 26, 26);
 }
 
 .header_nav {
@@ -28,6 +28,9 @@ span {
     transition: 0.2s;
     font-family: 'Tilt Neon', cursive;
     font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 span:hover {
