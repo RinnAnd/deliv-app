@@ -1,8 +1,8 @@
 import Header from "../Header/Header";
-import { FC } from "react";
+import { ReactNode, FC } from "react";
 
 interface Props {
-  component: FC
+  component: ReactNode;
 }
 
 const Wrapper: FC<Props> = ({ component }) => {

@@ -4,7 +4,7 @@
     position: sticky;
     top: 0px;
     padding: 2rem;
-    box-shadow: 0.5rem 1rem 1.1rem rgb(26, 26, 26);
+    box-shadow: 0px 15px 10px -16px #111;
 }
 
 .header_nav {
@@ -16,7 +16,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    color: rgb(255, 143, 87)
+    color: #f7036b
 }
 
 .nav_right {
@@ -34,7 +34,6 @@ span {
 }
 
 span:hover {
-    color: red;
-    transform: translateY(-0.2rem);
+    transform: translateY(-0.1rem);
 }
 

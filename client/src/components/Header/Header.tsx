@@ -19,8 +19,8 @@ const Header = () => {
         </div>
         <div className="nav_right">
             <span><FaSearch size={20}/></span>
-            <span><FaUserCircle size={20}/>login</span>
-            <span><BsCartFill style={{transform: 'translateY(-2px)'}} size={20}/></span>
+            <span><FaUserCircle size={20}/></span>
+            <span><BsCartFill size={20}/></span>
         </div>
       </nav>
     </div>

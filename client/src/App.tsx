@@ -1,14 +1,11 @@
 import Wrapper from "./components/Wrapper/Wrapper";
-import { useFetchShopsQuery } from "./redux/slices/shopSlice";
-import { useAppDispatch, useAppSelector } from "./redux/store/hooks";
 import Home from "./views/Home";
 
-function App() {
-  
+function App() {  
 
   return (
     <div>
-      <Wrapper component={Home}/>
+      <Wrapper component={<Home/>}/>
     </div>
   );
 }
