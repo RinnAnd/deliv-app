@@ -2,6 +2,8 @@ import app from "./app.js";
 import * as dotenv from "dotenv";
 import { sequelize } from "./database/db.js";
 dotenv.config();
+import { Shop } from "./models/Shop.js";
+import { Dish } from "./models/Dish.js";
 
 import './models/Shop.js';
 import './models/Dish.js';
@@ -17,3 +19,11 @@ const main = async () => {
 };
 
 main();
+
+Shop.hasMany(Dish, {
+  foreignKey: 'shop_id'    
+});
+
+Dish.belongsTo(Shop, {
+  foreignKey: 'shop_id'
+})

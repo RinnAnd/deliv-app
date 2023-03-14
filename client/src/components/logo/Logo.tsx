@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <h1>Deliv-app</h1>
+    <h1>Delivapp</h1>
   );
 };
 

@@ -1,4 +1,3 @@
-import thunkMiddleware from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 import { shopSlice } from "../slices/shopSlice";
 

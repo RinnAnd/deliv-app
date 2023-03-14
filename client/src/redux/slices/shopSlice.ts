@@ -1,31 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-interface Dish {
-  dish_id: number;
-  title: string;
-  description: string;
-  price: number;
-  ingredients?: string[];
-  image?: string;
-}
-interface Shop {
-  // declare interface for the type of the initial state
-  shop_id: number;
-  name: string;
-  cuisine: string;
-  logo?: string;
-  Dishes?: {
-    dish_id: number;
-    title: string;
-    description: string;
-    price: number;
-    ingredients?: string[];
-    image?: string;
-  };
-}
+import { Shop, Dish } from "../types";
 
 export const shopSlice = createApi({
-  reducerPath: "databse",
+  reducerPath: "database",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:2005/",
   }),
@@ -38,13 +15,34 @@ export const shopSlice = createApi({
         query: (id) => `shop/${id}`,
       }),
       fetchDishes: builder.query<Dish[], number | void>({
-        query: () => "dish"
+        query: () => "dish",
       }),
       fetchDish: builder.query<Dish, number | void>({
-        query: (id) => `dish/${id}`
-      })
+        query: (id) => `dish/${id}`,
+      }),
+      createShop: builder.mutation<any, Shop>({
+        query: (newShop: Shop) => ({
+          url: "shop",
+          method: "POST",
+          body: newShop,
+        }),
+      }),
+      createDish: builder.mutation<any, Dish>({
+        query: (newDish: Dish) => ({
+          url: "dish",
+          method: "POST",
+          body: newDish,
+        }),
+      }),
     };
   },
 });
 
-export const { useFetchShopsQuery, useFetchShopQuery, useFetchDishesQuery, useFetchDishQuery } = shopSlice;
+export const {
+  useFetchShopsQuery,
+  useFetchShopQuery,
+  useFetchDishesQuery,
+  useFetchDishQuery,
+  useCreateShopMutation,
+  useCreateDishMutation,
+} = shopSlice;

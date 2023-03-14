@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/db.js";
-import { Dish } from "./Dish.js";
 
 export const Shop = sequelize.define('Shop', {
     shop_id: {
@@ -22,11 +21,3 @@ export const Shop = sequelize.define('Shop', {
 }, {
     timestamps: false
 });
-
-Shop.hasMany(Dish, {
-    foreignKey: 'shop_id'    
-});
-
-Dish.belongsTo(Shop, {
-    foreignKey: 'shop_id'
-})

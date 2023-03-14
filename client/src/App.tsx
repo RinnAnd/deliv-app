@@ -1,5 +1,5 @@
 import Wrapper from "./components/Wrapper/Wrapper";
-import Home from "./views/Home";
+import Home from "./views/Home/Home";
 
 function App() {  
 
