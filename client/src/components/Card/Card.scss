@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Arya:wght@700&display=swap");
+@import '../../styles.scss';
 
 .card_box {
   display: flex;
   align-items: center;
   margin: 1rem;
   gap: 1rem;
-  background: rgba(16, 0, 7, 1);
+  background: map-get($color, $key: 'back');
   max-width: 30rem;
   min-width: 30rem;
   box-shadow: 4px 7px 35px 1px rgba(0,0,0,0.75);
@@ -13,7 +14,7 @@
 }
 
 .card_box:hover {
-  background: #1e000d;
+  background: map-get($color, $key: 'hover');
 }
 
 .info_side {

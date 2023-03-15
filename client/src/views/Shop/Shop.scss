@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@700&display=swap');
+@import '../../styles.scss';
 
 .shop_main {
   display: flex;
@@ -30,7 +31,7 @@
   left: 3rem;
   bottom: 7rem;
   aspect-ratio: 1;
-  border: solid 3px #f7036b;
+  border: solid 3px map-get($color, $key: 'main');
   background-color: white;
   z-index: 1;
 }
@@ -40,7 +41,7 @@
   left: 9rem;
   font-family: 'Arya', sans-serif;
   bottom: 13rem;
-  background-color: #f7036b;
+  background-color: map-get($color, $key: 'main');
   padding: 0.5rem 3rem;
   max-width: 14rem;
   z-index: 0;
