@@ -41,7 +41,21 @@ export const getShops = async (req, res) => {
 export const getShop = async (req, res) => {
   try {
     const { id } = req.params;
-    const shop = await Shop.findByPk(id);
+    const shop = await Shop.findByPk(id, {
+      include: [
+        {
+          model: Dish,
+          attributes: [
+            "dish_id",
+            "title",
+            "description",
+            "price",
+            "ingredients",
+            "image",
+          ],
+        }
+      ]
+    });
     return res.status(200).json(shop);
   } catch (error) {
     return res.status(500).json({ error: error.message });

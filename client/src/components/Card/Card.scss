@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Arya:wght@700&display=swap");
+
+.card_box {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+  background: rgba(16, 0, 7, 1);
+  max-width: 30rem;
+  min-width: 30rem;
+  box-shadow: 4px 7px 35px 1px rgba(0,0,0,0.75);
+  transition: 0.2s;
+}
+
+.card_box:hover {
+  background: #1e000d;
+}
+
+.info_side {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.shop_cuisine {
+  opacity: 0;
+  color: black;
+  left: 2.6rem;
+  transform: translateY(7rem);
+  transition: 0.4s;
+  font-family: "Arya", sans-serif;
+}
+
+.image_side {
+  display: flex;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.image_side:hover {
+  transform: scale(1.06);
+}
+
+.image_side:hover .shop_cuisine {
+  opacity: 1;
+  color: black;
+  transform: translateY(6rem);
+  background-color: rgb(190, 190, 190);
+}

@@ -6,6 +6,7 @@ export interface Dish {
     price: number;
     ingredients?: string[];
     image?: string;
+    shop_id: string;
 }
 
 export interface Shop {    // declare interface for the shops coming in
@@ -20,5 +21,5 @@ export interface Shop {    // declare interface for the shops coming in
       price: number;
       ingredients?: string[];
       image?: string;
-    };
+    }[];
 }

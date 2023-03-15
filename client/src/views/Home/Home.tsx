@@ -3,8 +3,12 @@ import "./Home.scss";
 import guy from "../../assets/pngegg.png";
 import register from '../../assets/shopreg.jpeg';
 import deliver from '../../assets/workwith.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Home: FC = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="main">
       <h1>Welcome to delivapp...</h1>
@@ -26,7 +30,7 @@ const Home: FC = () => {
             of minutes!
           </p>
           <div className="buttons">
-            <button className="button">See shops</button>
+            <button className="button" onClick={() => navigate('/shops')}>See shops</button>
             <button className="button">See categories</button>
           </div>
         </div>

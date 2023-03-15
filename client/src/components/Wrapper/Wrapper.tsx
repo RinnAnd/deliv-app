@@ -8,10 +8,10 @@ interface Props {
 const Wrapper: FC<Props> = ({ component }) => {
   return (
     <>
-        <Header />
-        {component}
+      <Header />
+      {component}
     </>
-  )
-}
+  );
+};
 
-export default Wrapper
+export default Wrapper;
