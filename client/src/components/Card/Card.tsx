@@ -27,7 +27,7 @@ const Card: FC<Props> = (Shop) => {
   return (
     <div className="card_box" key={shop_id}>
       <div className="image_side">
-        <div style={imageStyle}>
+        <div onClick={() => navigate(`/shop/${shop_id}`)} style={imageStyle}>
           <h4 className="shop_cuisine">{cuisine}</h4>
         </div>
       </div>

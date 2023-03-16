@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Arya:wght@700&display=swap");
-@import '../../styles.scss';
-
 .card_box {
   display: flex;
   align-items: center;
   margin: 1rem;
   gap: 1rem;
-  background: map-get($color, $key: 'back');
+  background: var(--back);
   max-width: 30rem;
   min-width: 30rem;
   box-shadow: 4px 7px 35px 1px rgba(0,0,0,0.75);
@@ -14,12 +11,13 @@
 }
 
 .card_box:hover {
-  background: map-get($color, $key: 'hover');
+  background: var(--hover);
 }
 
 .info_side {
   display: flex;
   padding: 1rem;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -34,7 +32,7 @@
   left: 2.6rem;
   transform: translateY(7rem);
   transition: 0.4s;
-  font-family: "Arya", sans-serif;
+  font-family: var(--font);
 }
 
 .image_side {

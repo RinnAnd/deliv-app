@@ -4,22 +4,33 @@ import "./Shop.scss";
 import noimg from "../../assets/noimage.png";
 import borgirs from "../../assets/Dashboard.jpg";
 import chickin from "../../assets/Chicken.jpg";
+import sanwich from '../../assets/bannersandwich.jpg'
 import DishCard from "../../components/Dish/DishCard";
-import { useState } from "react";
+import def from '../../assets/banner.png'
 
 const Shop = () => {
   const { id } = useParams();
 
   const { data, isLoading } = useFetchShopQuery(Number(id));
 
-  const [banner, setBanner] = useState()
+  let banner: string;
+
+  switch(data?.cuisine) {
+    case 'Burgers': banner = borgirs;
+    break;
+    case 'Fried chicken': banner = chickin;
+    break;
+    case 'Sandwiches': banner = sanwich;
+    break;
+    default: banner = def
+  }
 
   return (
     <div className="shop_main">
       <div className="dashboard">
         <div className="image_box">
           <img
-            src={data?.cuisine == "Burgers" ? borgirs : chickin}
+            src={banner}
             alt="no-dashboard"
             className="dash_img"
           />
