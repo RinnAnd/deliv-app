@@ -14,5 +14,6 @@ export interface Shop {    // declare interface for the shops coming in
     name: string;
     cuisine: string;
     logo?: string;
+    cat_id: number;
     Dishes?: Dish[];
 }

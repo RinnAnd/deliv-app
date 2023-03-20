@@ -3,11 +3,12 @@ import { Shop } from "../models/Shop.js";
 
 export const makeShop = async (req, res) => {
   try {
-    const { name, cuisine, logo } = req.body;
+    const { name, cuisine, logo, cat_id } = req.body;
     const shop = await Shop.create({
       name,
       cuisine,
       logo,
+      cat_id,
     });
     return res.status(200).json({ Shop: shop });
   } catch (error) {

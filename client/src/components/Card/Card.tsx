@@ -9,7 +9,7 @@ interface Props {
   logo?: string;
 }
 
-const Card: FC<Props> = (Shop) => {
+const Card = (Shop: Props) => {
   const { shop_id, name, cuisine, logo } = Shop;
 
   const navigate = useNavigate()
