@@ -1,16 +1,18 @@
-import { FC } from "react";
 import { Dish } from "../../redux/types";
+import accounting from 'accounting'
+import "./Dish.scss";
 
-const DishCard: FC<Dish> = (dish) => {
-  
-  const { title, description, price, image, ingredients } = dish
+const DishCard = (dish: Dish) => {
+  const { title, description, price, image, ingredients } = dish;
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{price}</p>
-      <img src={image} alt="no img" width={120}/>
+    <div className="dish_box">
+      <img src={image} alt="no img" className="dish_pic" />
+      <div className="dish_text">
+        <h2 className="dish_title">{title}</h2>
+        <p className="dish_desc">{description}</p>
+      </div>
+      <p className="dish_price">{accounting.formatMoney(price)}</p>
     </div>
   );
 };

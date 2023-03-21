@@ -46,6 +46,7 @@ const Shop = () => {
         <h2 className="contents_intro">
           Hi, Andrés. What will you order today?
         </h2>
+        <div className="dishes_view">
         {data?.Dishes?.map((dish: any, index: any) => (
           <DishCard
             key={index}
@@ -56,6 +57,7 @@ const Shop = () => {
             shop_id={dish.shop_id}
           />
         ))}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,50 @@
+.dish_box {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem 0;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--second);
+    border-radius: 1rem;
+    justify-content: space-evenly;
+    max-width: 31rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dish_box:hover {
+    background-color: var(--third);
+}
+
+.dish_box:hover .dish_pic {
+    transform: scale(1.02);
+}
+
+.dish_pic {
+    width: 7rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 7px 11px 13px 1px rgba(0,0,0,0.61);
+    transition: 0.3s;
+    border: solid 2px white;
+    background-color: white;
+}
+
+.dish_text {
+    width: 40%;
+}
+
+.dish_title {
+    color: var(--back);
+    font-size: 1.2rem;
+}
+
+.dish_desc {
+    color: var(--hover);
+}
+
+.dish_price {
+    font-size: 1.2rem;
+    color: black;
+}

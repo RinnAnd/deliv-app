@@ -46,6 +46,17 @@
   box-shadow: 11px 7px 12px 1px rgba(0,0,0,0.54);
 }
 
+.contents {
+  width: 100%;
+}
+
+.dishes_view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  justify-items: center;
+}
+
 .contents_intro {
   font-family: var(--font);
+  text-align: center;
 }
