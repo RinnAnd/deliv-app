@@ -55,6 +55,7 @@ const Shop = () => {
             price={dish.price}
             image={dish.image}
             shop_id={dish.shop_id}
+            dish_id={dish.dish_id}
           />
         ))}
         </div>
