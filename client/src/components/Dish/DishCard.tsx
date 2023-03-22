@@ -8,8 +8,6 @@ const DishCard = (dish: Dish) => {
 
   const navigate = useNavigate()
 
-  console.log(dish)
-
   return (
     <div className="dish_box" onClick={() => navigate(`/dish/${dish_id}`)}>
       <img src={image} alt="no img" className="dish_pic" />
