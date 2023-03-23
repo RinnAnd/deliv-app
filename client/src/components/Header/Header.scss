@@ -38,16 +38,15 @@ span:hover {
 
 .cartSize {
     position: absolute;
-    right: 3rem;
+    right: 2.8rem;
     top: 2.8rem;
     color: white;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 0;
-    padding: 0;
+    padding: 0 6px;
     animation: popIn 0.3s;
     background-color: var(--second);
     border-radius: 100%;
-    aspect-ratio: 3/1;
 }
 
 @keyframes popIn {
@@ -55,6 +54,6 @@ span:hover {
         font-size: 0;
     }
     100% {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }

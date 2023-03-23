@@ -7,14 +7,19 @@ import Logo from '../logo/Logo';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../redux/store/store';
+import Modal from '../Modal/Modal';
 
 const Header = () => {
 
-  const [bar, setBar] = useState<boolean>(false)
+  const [modal, setModal] = useState(false)
 
   const cartSize:number = useAppSelector(state => state.cart.products.length)
 
   const navigate = useNavigate()
+
+  const toggle = () => {
+    setModal(!modal)
+  }
 
   return (
     <div className="header_main">
@@ -26,10 +31,11 @@ const Header = () => {
         <div className="nav_right">
             <span><FaSearch size={20}/></span>
             <span><FaUserCircle size={20}/></span>
-            <span><BsCartFill size={20}/></span>
+            <span onClick={toggle}><BsCartFill size={20}/></span>
         </div>
         {cartSize >= 1 ? ( <span className='cartSize'>{cartSize}</span>) : null}
       </nav>
+      {modal ? <Modal modal={modal} setModal={setModal}/> : <></>}
     </div>
   );
 };
