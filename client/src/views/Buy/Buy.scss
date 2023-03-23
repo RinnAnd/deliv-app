@@ -84,3 +84,23 @@
 .data_price {
     font-size: 1.5rem;
 }
+
+.button_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add_button {
+  background-color: var(--main);
+  padding: 0.7rem;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add_button:hover {
+  transform: translateY(-0.2rem);
+  background-color: var(--second);
+}

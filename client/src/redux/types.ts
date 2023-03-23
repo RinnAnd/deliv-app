@@ -7,6 +7,7 @@ export interface Dish {
     ingredients?: string[];
     image?: string;
     shop_id: string;
+    quant?:number;
 }
 
 export interface Shop {    // declare interface for the shops coming in
@@ -17,3 +18,7 @@ export interface Shop {    // declare interface for the shops coming in
     cat_id: number;
     Dishes?: Dish[];
 }
+
+export interface cartState {
+    products: Dish[],
+};

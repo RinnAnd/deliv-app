@@ -1,7 +1,19 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Dish, cartState } from "../types";
 
-const cartSlice = createSlice({
+
+const initialState: cartState = {
+    products: []
+}
+
+export const cartSlice = createSlice({
     name: 'cart',
-    initialState: [],
-    reducers: {}
+    initialState,
+    reducers: {
+        addProduct: (state, action: PayloadAction<Dish>) => {
+            state.products.push(action.payload)
+        }
+    }
 });
+
+export const { addProduct } = cartSlice.actions;

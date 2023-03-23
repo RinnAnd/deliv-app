@@ -6,10 +6,13 @@ import { FaSearch } from 'react-icons/fa'
 import Logo from '../logo/Logo';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAppSelector } from '../../redux/store/store';
 
 const Header = () => {
 
   const [bar, setBar] = useState<boolean>(false)
+
+  const cartSize:number = useAppSelector(state => state.cart.products.length)
 
   const navigate = useNavigate()
 
@@ -25,6 +28,7 @@ const Header = () => {
             <span><FaUserCircle size={20}/></span>
             <span><BsCartFill size={20}/></span>
         </div>
+        {cartSize >= 1 ? ( <span className='cartSize'>{cartSize}</span>) : null}
       </nav>
     </div>
   );
