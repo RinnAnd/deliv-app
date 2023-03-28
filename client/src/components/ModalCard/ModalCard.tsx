@@ -3,7 +3,7 @@ import './ModalCard.scss';
 
 const ModalCard = (dish: Dish) => {
 
-    const { title, image, price } = dish
+    const { title, image, price, quant } = dish
 
   return (
     <div className="modal_card_box">
@@ -14,6 +14,7 @@ const ModalCard = (dish: Dish) => {
             <div className="modal_data">
                 <h4>{title}</h4>
                 <p>{price}</p>
+                <p>{quant}</p>
             </div>
         </div>
     </div>

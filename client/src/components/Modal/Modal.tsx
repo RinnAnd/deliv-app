@@ -19,8 +19,8 @@ const Modal = ({modal, setModal}:ModalProps) => {
     <div className="overlay">
         <div className="modal">
             <h2>Your cart</h2>
-            {cart.map(product => (
-                <ModalCard key={product.dish_id} title={product.title} image={product.image} price={product.price}/>
+            {cart.map((product:any) => (
+                <ModalCard description={product.description} shop_id={product.shop_id} key={product.dish_id} title={product.title} image={product.image} price={product.price} quant={product.quant}/>
             ))}
             <button onClick={toggle}>Close cart</button>
         </div>

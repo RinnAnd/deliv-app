@@ -17,3 +17,8 @@
   --hover: #1e000d;
   --font: "Arya", sans-serif;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}

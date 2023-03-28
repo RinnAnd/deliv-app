@@ -12,8 +12,6 @@ const Buy = () => {
 
   const cart = useAppSelector((state) => state.cart?.products);
 
-  console.log(cart);
-
   const dispatch = useAppDispatch();
 
   return (
